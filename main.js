@@ -9,19 +9,41 @@ var user = {
 
   // Methodes
   getFirstName : function() {
-    alert(this.firstName);
+    var container = document.getElementById('firstName');
+    container.innerHTML += this.firstName;
   },
   getLastName : function() {
-    alert(this.lastName);
+    var container = document.getElementById('lastName');
+    container.innerHTML += this.lastName;
+  },
+  getLocation : function() {
+    var container = document.getElementById('location');
+    container.innerHTML += this.location;
   },
   getBirthYear : function() {
     var birthYear = (new Date().getFullYear()) - this.age;
-    alert(birthYear);
+    var container = document.getElementById('birthYear');
+    container.innerHTML += birthYear;
+  },
+  getPaiement : function() {
+    var container = document.getElementById('paiement')
+    for (var i = 0; i < this.paiement.length; i++) {
+      card = this.paiement[i];
+      container.innerHTML += card.charAt(0).toUpperCase() + card.slice(1);
+      if(i < this.paiement.length -1 ) {
+        container.innerHTML += ", ";
+      }
+    }
+  },
+  showInfo : function() {
+    this.getFirstName();
+    this.getLastName();
+    this.getLocation(),
+    this.getBirthYear();
+    this.getPaiement();
   }
 };
-user.getFirstName();
-user.getLastName();
-user.getBirthYear();
+
 
 var userChecker = {
   // Properties
@@ -73,4 +95,6 @@ var userChecker = {
   }
 };
 
-userChecker.checkUser(user);
+user.showInfo();
+
+//userChecker.checkUser(user);
