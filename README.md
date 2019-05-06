@@ -2,7 +2,7 @@
 
 Il s'agit d'un exercice produit dans le cadre de mon poste de formateur en développement web. Cet exercice est donné aux apprenants lorsqu'ils maîtrisent l'algorithmie en JavaScript et la manipulation avancée du DOM. L'objectif de cet exercice est de leur faire pratiquer la programmation orientée objet JS et notamment de travailler avec plusieurs objets en même temps.
 
-Une version en ligne de l'exercice avec une interface graphique est visible à :
+Une version en ligne de l'exercice avec une interface graphique est visible à : https://thomgo.github.io/usersJSPOO/
 
 Au travers de cet exercice, ils apprennent à :
 - déclarer des attributs
