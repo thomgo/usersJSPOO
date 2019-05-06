@@ -1,6 +1,8 @@
 # Exercice utilisateurs et POO JS
 
-Il s'agit d'un exercice que j'ai produit dans le cadre de mon poste de formateur en développement web à Simplon Roubaix. Cet exercice est donné aux apprenants lorsqu'ils maîtrisent l'algorithmie en JavaScript et la manipulation avancée du DOM. L'objectif de cet exercice et de leur faire pratiquer la POO JS et notamment travailler avec plusieurs objets en même temps.
+Il s'agit d'un exercice produit dans le cadre de mon poste de formateur en développement web. Cet exercice est donné aux apprenants lorsqu'ils maîtrisent l'algorithmie en JavaScript et la manipulation avancée du DOM. L'objectif de cet exercice est de leur faire pratiquer la programmation orientée objet JS et notamment de travailler avec plusieurs objets en même temps.
+
+Une version en ligne de l'exercice avec une interface graphique est visible à :
 
 Au travers de cet exercice, ils apprennent à :
 - déclarer des attributs
@@ -13,7 +15,7 @@ Au travers de cet exercice, ils apprennent à :
 
 ## Consignes
 
-Dans cet exercice, pour débuter, nous allons travailler la déclaration littérale des objets. Vous aller déclarer un objet user avec :
+Dans cet exercice, pour débuter, nous allons travailler la déclaration littérale des objets. Vous allez déclarer un objet user avec :
 
 Les propriétés suivantes :
 
@@ -29,7 +31,7 @@ Les méthodes suivantes :
 - une méthode qui alerte le nom de l'utilisateur
 - une méthode qui alerte l'année de naissance de l'utilisateur en faisant le calcul à partir de son âge
 
-Appeler toutes ces méthodes dans votre script pour afficher les informations suivantes : nom, prénom, date de naissance.
+Appelez toutes ces méthodes dans votre script pour afficher les informations suivantes : nom, prénom, date de naissance.
 
 ## Pour aller plus loin
 
@@ -39,15 +41,15 @@ Pour continuer à vous entraîner nous allons maintenant créer un objet qui va 
 
 Dans un premier temps, déclarez un objet litéral qui contient les propirétés suivantes :
 
-- la liste tout en majuscules des pays autorisés pour notre utilisateur
+- la liste en majuscules des pays autorisés pour notre utilisateur
 
-- la liste tout en majuscules des moyens de paiement autorisés sur le site
+- la liste en majuscules des moyens de paiement autorisés sur le site
 
 - l'âge minimum pour entrer sur le site
 
 Vous avez maintenant un objet avec les valeurs de référence auxquelles vous allez pouvoir comparer l'utilisateur. Vous allez donc ajouter les méthodes suivantes à cet objet :
 
-- Une méthode qui vérifie si notre utilisateur à l'âge minimum requis et affiche un message en conséquence
+- Une méthode qui vérifie si notre utilisateur a l'âge minimum requis et affiche un message en conséquence
 
 - Une méthode qui vérifie que le pays de l'utilisateur est bien dans la liste des pays autorisés et affiche un message en conséquence
 
@@ -55,4 +57,8 @@ Vous avez maintenant un objet avec les valeurs de référence auxquelles vous al
 
 Maintenant appelez ces trois méthodes dans votre script et vérifiez qu'elles affichent les bons messages.
 
-C'est super, normalement tout marche correctement ! Cependant vous pouvez encore améliorer un peu votre code ! Il est pénible de devoir lancer chaque méthode séparemment. Créez donc une méthode qui effectue toutes les vérifications  des informations de l'utilisateur en une fois et vous aurez fini !
+C'est super, normalement tout marche correctement ! Cependant vous pouvez encore améliorer un peu votre code ! Il est pénible de devoir lancer chaque méthode séparemment. Créez donc une méthode qui effectue toutes les vérifications des informations de l'utilisateur en une fois et vous aurez fini !
+
+## Pour aller encore plus loin
+
+Proposez un visuel HTML/CSS pour votre programme. Vous pouvez par exemple afficher les information de l'utilisateur sous forme d'une carte et déclencher la vérification de ses informations par un clic sur un bouton. Des message d'erreur ou de succès seront alors affichés à l'écran.
