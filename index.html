@@ -2,9 +2,60 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Users POO JS</title>
+    <title>Exercice User POO JS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </head>
   <body>
+    <!-- Header -->
+    <header class="jumbotron jumbotron-fluid bg-dark text-white">
+      <section class="container">
+        <h1 class="display-5">Exercice de gestion des utilisateurs en POO JavaScript <i class="fas fa-user-check"></i></h1>
+        <p class="lead">Saurez-vous vérifier que notre utilisateur remplisse toutes les conditions de notre site ?</p>
+      </section>
+    </header>
+
+    <main class="container mb-3">
+      <div class="row">
+        <!-- Left section to show the user info -->
+        <section class="col-sm-6">
+          <div class="card">
+            <div class="card-body bg-light">
+              <h5 class="card-title text-center font-weight-bold">Informations sur votre Profil</h5>
+              <p class="card-text">Voici l'ensemble des informations dont nous disposons</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item" id="firstName">Prénom : </li>
+              <li class="list-group-item" id="lastName">Nom : </li>
+              <li class="list-group-item" id="location">Pays : </li>
+              <li class="list-group-item" id="birthYear">Année de naissance : </li>
+              <li class="list-group-item" id="paiement">Moyens de paiement enregistrés : </li>
+              <!-- button to launch the validation -->
+              <li class="list-group-item text-center"><button onclick="userChecker.checkUser(user)" class="btn btn-dark">Valider</button></li>
+            </ul>
+            <div class="card-footer text-muted text-center">
+              Pour tout problème lors de votre admission contactez le service technique
+            </div>
+          </div>
+        </section>
+        <!-- right section to show the result of the user validation -->
+        <section class="col-sm-6">
+          <div class="card my-1">
+            <div class="card-body bg-light">
+              <h5 class="card-title text-center font-weight-bold">Résulat de votre évaluation</h5>
+              <p class="card-text">Merci de corriger les erreurs détectées</p>
+            </div>
+          </div>
+          <!-- div that stores the alerts with message -->
+          <div id="message"></div>
+        </section>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
