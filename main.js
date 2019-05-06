@@ -50,29 +50,36 @@ var userChecker = {
   allowedLocations : ["FRANCE", "GERMANY", "SWEDEN", "SPAIN"],
   allowedPaiement : ["VISA", "MAESTRO"],
   minimumAge: 16,
+  error: "<div class='alert alert-danger' role='alert'></div>",
+  success: "<div class='alert alert-success' role='alert'></div>",
+  messageContainer: document.getElementById('message'),
 
   // Methodes
   checkLocation : function(user) {
     var location = user.location.toUpperCase();
     if (this.allowedLocations.includes(location)) {
-      alert("Location OK");
+      this.messageContainer.innerHTML += this.success;
+      this.messageContainer.lastChild.innerHTML = "Pays d'origine autorisé";
     }
     else {
-      alert("Location not OK");
+      this.messageContainer.innerHTML += this.error;
+      this.messageContainer.lastChild.innerHTML = "Pays d'origine non autorisé";
     }
   },
 
   checkAge : function(user) {
     if (user.age >= this.minimumAge) {
-      alert("You are old enough");
+      this.messageContainer.innerHTML += this.success;
+      this.messageContainer.lastChild.innerHTML = "Vous l'âge requis";
     }
     else {
-      alert("You are too young");
+      this.messageContainer.innerHTML += this.error;
+      this.messageContainer.lastChild.innerHTML = "Vous n'avez pas l'âge requis";
     }
   },
 
   checkPaiment : function(user) {
-    var message = "The user can pay with ";
+    var message = "Vous pouvez payer avec : ";
     var detection = false;
     for(var i = 0; i< user.paiement.length; i++) {
       if(this.allowedPaiement.includes(user.paiement[i].toUpperCase())) {
@@ -81,10 +88,12 @@ var userChecker = {
       }
     }
     if(detection) {
-      alert(message);
+      this.messageContainer.innerHTML += this.success;
+      this.messageContainer.lastChild.innerHTML = message;
     }
     else {
-      alert("The user can not pay on the site");
+      this.messageContainer.innerHTML += this.error;
+      this.messageContainer.lastChild.innerHTML = "Aucun de vos moyens de paiment ne peut être utilisé";
     }
   },
 
@@ -96,5 +105,3 @@ var userChecker = {
 };
 
 user.showInfo();
-
-//userChecker.checkUser(user);

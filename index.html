@@ -30,6 +30,7 @@
               <li class="list-group-item" id="location">Pays : </li>
               <li class="list-group-item" id="birthYear">Année de naissance : </li>
               <li class="list-group-item" id="paiement">Moyens de paiement enregistrés : </li>
+              <li class="list-group-item text-center"><button onclick="userChecker.checkUser(user)" class="btn btn-dark">Valider</button></li>
             </ul>
             <div class="card-footer text-muted text-center">
               Pour tout problème lors de votre admission contactez le service technique
@@ -37,7 +38,13 @@
           </div>
         </section>
         <section class="col-sm-6">
-
+          <div class="card my-1">
+            <div class="card-body bg-light">
+              <h5 class="card-title text-center font-weight-bold">Résulat de votre évaluation</h5>
+              <p class="card-text">Merci de corriger les erreurs détectées</p>
+            </div>
+          </div>
+          <div id="message"></div>
         </section>
       </div>
     </main>
